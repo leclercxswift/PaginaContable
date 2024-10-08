@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./styles/login.css" />
+
 </head>
+
 <body>
-    <div>
-        <div>
-            <form onsubmit="login(event)">
-                <input id="username" type="text" required>
-                <input id="password" type="password" required>
-                <input type="submit">
+    <div id="welcome">
+    
+    <div class="container">
+        <div class="form-container">
+            <form onsubmit="login(event)" class="login-form">
+                <input id="username" type="text" placeholder="Usuario" required>
+                <input id="password" type="password" placeholder="Contraseña" required>
+                <input type="submit" value="Login">
             </form>
-            <img>
-        </div>
-        <div>
-            <img>
-            <form></form>
+            <img src="logo.png" alt="Logo" class="form-logo">
         </div>
     </div>
 
@@ -27,7 +28,6 @@
             username = document.getElementById("username").value;
             localStorage.setItem("username",username);
             window.location.href = 'contable.html'; 
-
         }
     </script>
 </body>
